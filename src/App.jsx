@@ -77,9 +77,15 @@ const navItems = ["Home", "Projects", "Skills", "About", "Contact"];
 function SectionTitle({ eyebrow, title, subtitle }) {
   return (
     <div className="mb-10">
-      <p className="text-sm uppercase tracking-[0.25em] text-red-400/80">{eyebrow}</p>
-      <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">{title}</h2>
-      {subtitle ? <p className="mt-3 max-w-2xl text-zinc-400">{subtitle}</p> : null}
+      <p className="text-sm uppercase tracking-[0.25em] text-red-400/80">
+        {eyebrow}
+      </p>
+      <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
+        {title}
+      </h2>
+      {subtitle ? (
+        <p className="mt-3 max-w-2xl text-zinc-400">{subtitle}</p>
+      ) : null}
     </div>
   );
 }
@@ -94,7 +100,10 @@ export default function SriAbishekPortfolio() {
 
       <header className="sticky top-0 z-40 border-b border-white/5 bg-[#09090b]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#home" className="text-2xl font-bold tracking-wide text-red-500 md:text-3xl">
+          <a
+            href="#home"
+            className="text-2xl font-bold tracking-wide text-red-500 md:text-3xl"
+          >
             Sri
           </a>
 
@@ -140,10 +149,13 @@ export default function SriAbishekPortfolio() {
               Sri Abishek
             </h1>
             <p className="mt-4 text-lg font-medium text-zinc-300 md:text-xl">
-              Computer Science Undergraduate <span className="text-red-400">|</span> Aspiring IT Professional
+              Computer Science Undergraduate{" "}
+              <span className="text-red-400">|</span> Aspiring IT Professional
             </p>
             <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-400 md:text-lg">
-              I’m a Computer Science undergraduate passionate about software development, mobile applications, and creating practical technology solutions that deliver real-world impact.
+              I’m a Computer Science undergraduate passionate about software
+              development, mobile applications, and creating practical
+              technology solutions that deliver real-world impact.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -179,7 +191,8 @@ export default function SriAbishekPortfolio() {
               <img
                 src="/profile.png"
                 alt="Sri Abishek"
-                className="h-full w-full rounded-[1.6rem] object-cover object-top translate-y-6"
+                className="h-full w-full rounded-[1.6rem] object-cover"
+                style={{ objectPosition: "center 18%" }}
               />
             </div>
           </motion.div>
@@ -207,14 +220,18 @@ export default function SriAbishekPortfolio() {
                     <p className="text-xs uppercase tracking-[0.25em] text-red-400/80">
                       {project.category}
                     </p>
-                    <h3 className="mt-3 text-xl font-semibold text-white">{project.title}</h3>
+                    <h3 className="mt-3 text-xl font-semibold text-white">
+                      {project.title}
+                    </h3>
                   </div>
                   <span className="rounded-full border border-red-500/25 bg-red-500/10 px-3 py-1 text-xs font-medium text-red-300">
                     {project.status}
                   </span>
                 </div>
 
-                <p className="mt-4 text-sm leading-7 text-zinc-400">{project.description}</p>
+                <p className="mt-4 text-sm leading-7 text-zinc-400">
+                  {project.description}
+                </p>
 
                 <div className="mt-5 space-y-3 text-sm text-zinc-300">
                   <p>
@@ -275,14 +292,27 @@ export default function SriAbishekPortfolio() {
           className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-8"
         >
           <div>
-            <SectionTitle eyebrow="About Me" title="A technical mindset with a collaborative approach" />
+            <SectionTitle
+              eyebrow="About Me"
+              title="A technical mindset with a collaborative approach"
+            />
           </div>
           <div className="rounded-[2rem] border border-white/6 bg-white/[0.03] p-8">
             <p className="text-base leading-8 text-zinc-400">
-              I am a Computer Science undergraduate with a growing interest in software development, mobile applications, and practical technology solutions that create meaningful value. My work so far has included academic and project-based experience across mobile development, frontend development, backend technologies, and user-focused design.
+              I am a Computer Science undergraduate with a growing interest in
+              software development, mobile applications, and practical
+              technology solutions that create meaningful value. My work so far
+              has included academic and project-based experience across mobile
+              development, frontend development, backend technologies, and
+              user-focused design.
             </p>
             <p className="mt-6 text-base leading-8 text-zinc-400">
-              Alongside technical learning, I have also taken leadership responsibilities in project environments, which helped me strengthen collaboration, communication, coordination, and problem-solving. I enjoy building with teams, learning from challenges, and continuously improving my skills through real project experience.
+              Alongside technical learning, I have also taken leadership
+              responsibilities in project environments, which helped me
+              strengthen collaboration, communication, coordination, and
+              problem-solving. I enjoy building with teams, learning from
+              challenges, and continuously improving my skills through real
+              project experience.
             </p>
           </div>
         </section>
@@ -302,7 +332,9 @@ export default function SriAbishekPortfolio() {
               >
                 <Mail className="h-5 w-5 text-red-400" />
                 <p className="mt-4 text-sm text-zinc-500">Email</p>
-                <p className="mt-1 font-medium text-white">abishekbalendran004@gmail.com</p>
+                <p className="mt-1 font-medium text-white">
+                  abishekbalendran004@gmail.com
+                </p>
               </a>
 
               <a
@@ -313,7 +345,9 @@ export default function SriAbishekPortfolio() {
               >
                 <Linkedin className="h-5 w-5 text-red-400" />
                 <p className="mt-4 text-sm text-zinc-500">LinkedIn</p>
-                <p className="mt-1 font-medium text-white">linkedin.com/in/shriabishek</p>
+                <p className="mt-1 font-medium text-white">
+                  linkedin.com/in/shriabishek
+                </p>
               </a>
 
               <a
@@ -324,7 +358,9 @@ export default function SriAbishekPortfolio() {
               >
                 <Github className="h-5 w-5 text-red-400" />
                 <p className="mt-4 text-sm text-zinc-500">GitHub</p>
-                <p className="mt-1 font-medium text-white">github.com/Shri-1019</p>
+                <p className="mt-1 font-medium text-white">
+                  github.com/Shri-1019
+                </p>
               </a>
             </div>
           </div>
